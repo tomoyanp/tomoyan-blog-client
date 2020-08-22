@@ -1,0 +1,26 @@
+@import '../../scss/valiables.scss';
+
+.container {
+    background-color: rgb(40, 40, 255);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: calc(100% - 20px);
+    height: $global-menu-height;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.4);
+}
+
+.blog-list, .profile {
+    margin: 0 10px;
+}
+
+.top {
+    margin-right: auto;
+    margin-left: 10px;
+}
