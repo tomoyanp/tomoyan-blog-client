@@ -1,1 +1,25 @@
-<p>blog-list works!</p>
+<div class="container">
+    <div class="contents" *ngFor="let blog of blogList">
+        <div class="row">
+            <div class="tags" *ngFor="let tag of blog.tags">
+                <span class="tag">{{ tag }}</span>
+            </div>
+        </div>
+        <div class="row title">
+            <div class="date">
+                {{ blog.date }}
+            </div>
+            <div class="title">
+                {{ blog.title }}
+            </div>
+        </div>
+        <div class="row summary">
+            <div class="thumbnail">
+                <img src="xxx">
+            </div>
+            <div class="summary">
+                {{ blog.summary }}
+            </div>
+        </div>
+    </div>
+</div>
