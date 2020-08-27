@@ -10,6 +10,7 @@ export class BlogListComponent implements OnInit {
   public blogList = [
     {
       tags: ['#Angular', 'プログラミング'],
+      id: 20200827000,
       date: '2020-08-04',
       title: '【Angular】ブログシステムを作ってみた',
       thumbnail: '',
@@ -17,6 +18,7 @@ export class BlogListComponent implements OnInit {
     },
     {
       tags: ['#Angular', 'プログラミング'],
+      id: 20200827001,
       date: '2020-08-04',
       title: '【Angular】ブログシステムを作ってみた',
       thumbnail: '',

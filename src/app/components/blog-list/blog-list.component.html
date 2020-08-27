@@ -9,7 +9,7 @@
             <div class="date">
                 {{ blog.date }}
             </div>
-            <div class="title">
+            <div class="title" routerLink="/blog-details" [queryParams]="{ id: blog.id }">
                 {{ blog.title }}
             </div>
         </div>
