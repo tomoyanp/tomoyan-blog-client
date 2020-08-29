@@ -1,0 +1,21 @@
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.inner-container {
+    width: 70%;
+}
+
+.inner-container {
+    padding: 20px;
+}
+
+.inner-container > div {
+    margin: 0 10px;
+}
+
+.header {
+    border-bottom: solid 1px rgba(0, 0, 0, 0.3);
+}

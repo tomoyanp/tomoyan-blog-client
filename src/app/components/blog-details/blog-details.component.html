@@ -1,1 +1,25 @@
-<p>blog-details works!</p>
+<div class="container">
+    <div class="inner-container">
+        <div class="header">
+            <div class="title">
+                {{ blogData.date }}
+            </div>
+            <div class="date">
+                {{ blogData.title }}
+            </div>
+            <div class="tags">
+                <span *ngFor="let tag of blogData.tags">
+                    <fa-icon [icon]="tagIcon"></fa-icon>{{ tag }}
+                </span>
+            </div>
+        </div>
+        <div class="body">
+            <div class="row" *ngFor="let row of blogData.body">
+                <ng-container *ngFor="let elem of row">
+                    <span *ngIf="elem.type === 'text'" [style]="elem.style">{{ elem.content }}</span>
+                    <img *ngIf="elem.type === 'image'" [src]="elem.content">
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>
