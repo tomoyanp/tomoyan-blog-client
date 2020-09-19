@@ -44,7 +44,7 @@ export class BlogDetailsComponent implements OnInit {
         {
           type: 'text',
           content: 'mogemoge2',
-          style: undefined
+          style: 'font-size: 30px;'
         },
         {
           type: 'image',

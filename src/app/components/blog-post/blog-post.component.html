@@ -1,0 +1,11 @@
+<div>
+    タイトル<input type="text" [(ngModel)]="title">
+</div>
+<div>
+    タグ<input type="text" [(ngModel)]="tags">
+</div>
+<div>
+    コンテンツ<textarea rows="30" cols="100" [(ngModel)]="contents"></textarea>
+</div>
+
+<button (click)="post()">投稿</button>
