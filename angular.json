@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "tomoyan-blog"
+    }
+  },
+  "defaultProject": "tomoyan-blog",
+  "cli": {
+    "analytics": "e5ceb316-79ac-49f1-b02e-191f27397754"
+  }
 }

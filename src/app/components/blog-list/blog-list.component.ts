@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BlogListService } from 'src/app/services/blog-list.service';
 
 @Component({
   selector: 'app-blog-list',
@@ -27,9 +28,13 @@ export class BlogListComponent implements OnInit {
 
   ];
 
-  constructor() { }
+  constructor(private _blogListService: BlogListService) { }
 
   ngOnInit(): void {
+    this._blogListService.get().subscribe(blogList => {
+      console.log(blogList);
+    });
+    
   }
 
 }

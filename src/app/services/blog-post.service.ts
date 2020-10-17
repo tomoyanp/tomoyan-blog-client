@@ -9,18 +9,16 @@ export class BlogPostService {
 
   constructor(private http: HttpClient) { }
 
-  private httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json'
-    })
-  };
-
-  post(data: object) {
-    console.log('call post request');
+  post(data: object, files) {
+    const formData = new FormData();
+    files.forEach(file => { 
+      console.log(file.name);
+      formData.append(file.name, file, file.name);
+    });
+    formData.append('data', JSON.stringify(data));
     return this.http.post(
       this.url,
-      data,
-      this.httpOptions
+      formData,
     );
   }
 }

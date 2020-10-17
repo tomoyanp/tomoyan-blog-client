@@ -8,4 +8,8 @@
     コンテンツ<textarea rows="30" cols="100" [(ngModel)]="contents"></textarea>
 </div>
 
+<div *ngFor="let n of roopArray(fileList.length + 1)">
+    <input type="file" #fl accept="image/*" (change)="onFileChange(fl.files)" multiple/>
+</div>
+
 <button (click)="post()">投稿</button>

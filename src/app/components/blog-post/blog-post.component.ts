@@ -10,12 +10,16 @@ export class BlogPostComponent implements OnInit {
   public title: string;
   public contents: string;
   public tags: string;
+  public fileList: Array<object> = [];
 
-  constructor(private service: BlogPostService) { }
+  constructor(private _blogPostService: BlogPostService) { }
 
   ngOnInit(): void {
   }
 
+  public roopArray(size) {
+    return new Array(size).fill(0);
+  }
 
   public post() {
     const data = {
@@ -23,9 +27,16 @@ export class BlogPostComponent implements OnInit {
       tags: this.tags,
       contents: this.contents
     };
-    this.service.post(data).subscribe(item => {
+    this._blogPostService.post(data, this.fileList).subscribe(item => {
       console.log(item);
     });
+  }
+
+  public onFileChange(files) {
+    console.log(files);
+    if (files.length > 0) {
+      this.fileList.push(files[0]);
+    }
   }
 
 }
